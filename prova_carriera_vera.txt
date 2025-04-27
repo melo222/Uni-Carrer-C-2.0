@@ -1,0 +1,21 @@
+MdC|Matematica del Continuo|12|23
+DIR|Diritto|6|19
+Prog|Programmazione|12|25
+AOC|Aspetti Organizzativi della CyberSec|6|30
+AdE|Architettura degli Elaboratori     |6|30
+SO|Sistemi Operativi|12|20
+Algo|Algoritmi|12|23
+BdD|Basi di Dati|6|29
+Cg|Crittografia|6|23
+St|Statistica|6|27
+RdC|Reti di Calcolatori|12|20
+PWM|Programmazione Web e Mobile|6|23
+PSS|Programmazione Software Sicuro|6|24
+AGR|Analisi e Gestione del Rischio     |6|28
+SSR1|Sicurezza dei Sistemi e delle Reti|6|26
+BIO|Biometria|6|27
+CF|Computer Forensics|6|24
+MDD|Matematica del Discreto|6|24
+SSW|Sicurezza Web|6|24
+TSS|Tecniche Sicurezza del Software|6|24
+AO|Aspetti Organizzativi Random|3|26
