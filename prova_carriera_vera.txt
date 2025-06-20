@@ -14,8 +14,8 @@ PSS|Programmazione Software Sicuro|6|24
 AGR|Analisi e Gestione del Rischio     |6|28
 SSR1|Sicurezza dei Sistemi e delle Reti|6|26
 BIO|Biometria|6|27
-CF|Computer Forensics|6|24
-MDD|Matematica del Discreto|6|24
+CF|Computer Forensics|6|29
+MDD|Matematica del Discreto|6|19
 SSW|Sicurezza Web|6|24
 TSS|Tecniche Sicurezza del Software|6|24
-AO|Aspetti Organizzativi Random|3|26
+AO|Aspetti Organizzativi Random|3|30
