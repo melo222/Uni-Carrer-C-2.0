@@ -1,21 +1,22 @@
+ENG|Accertamento Lingua Inglese|03|30
 MdC|Matematica del Continuo|12|23
-DIR|Diritto|6|19
+DIR|Diritto|06|19
 Prog|Programmazione|12|25
-AOC|Aspetti Organizzativi della CyberSec|6|30
-AdE|Architettura degli Elaboratori     |6|30
-SO|Sistemi Operativi|12|20
+AOC|Aspetti Organizzativi della CyberSec|06|30
+AdE|Architettura degli Elaboratori|06|30
+SO_|Sistemi Operativi|12|20
 Algo|Algoritmi|12|23
-BdD|Basi di Dati|6|29
-Cg|Crittografia|6|23
-St|Statistica|6|27
+BdD|Basi di Dati|12|29
+Cg_|Crittografia|06|23
+St_|Statistica|06|27
 RdC|Reti di Calcolatori|12|20
-PWM|Programmazione Web e Mobile|6|23
-PSS|Programmazione Software Sicuro|6|24
-AGR|Analisi e Gestione del Rischio     |6|28
-SSR1|Sicurezza dei Sistemi e delle Reti|6|26
-BIO|Biometria|6|27
-CF|Computer Forensics|6|29
-MDD|Matematica del Discreto|6|19
-SSW|Sicurezza Web|6|24
-TSS|Tecniche Sicurezza del Software|6|24
-AO|Aspetti Organizzativi Random|3|30
+PWM|Programmazione Web e Mobile|06|23
+PSS|Programmazione Software Sicuro|06|24
+AGR|Analisi e Gestione del Rischio|06|28
+SSR1|Sicurezza dei Sistemi e delle Reti|06|26
+CF_|Computer Forensics|06|29
+AO_|Aspetti Organizzativi Random|03|30
+MDD|Matematica del Discreto|06|19
+TSS|Tecniche Sicurezza del Software|06|21
+BIO|Biometria|06|27
+SSW|Sicurezza Web|06|24

@@ -8,9 +8,9 @@
 
 typedef struct {
     char cod[5];
-    char nome[MAXLEN];
-    int cfu;
-    int voto;
+    char nome[100];
+    short cfu;
+    short voto;
 } Exam;
 
 
@@ -39,13 +39,63 @@ void leggi_da_file_testo(const char *filename) {
 
     Exam dato;
     char buffer[200];
+    int max_len_exam = 0;
+    char cod_[32][4];
+    char (*cod)[4]; cod = &cod_[0];
+    char cfu_[32][4];
+    char (*cfu)[4]; cfu = &cfu_[0];
+    char voto_[32][4];
+    char (*voto)[4]; voto = &voto_[0];
+    char nome_[32][64];
+    char (*nome)[64]; nome = &nome_[0];
+    char output[4096];
 
+    int size = 0;
     while (fgets(buffer, sizeof(buffer), file)) {
 
-        sscanf(buffer, "%4[^|]|%99[^|]|%d|%d", dato.cod, dato.nome, &dato.cfu, &dato.voto);
-       
-        printf("COD: %s\t Nome: %s\t CFU: %d\t\t Voto: %d\n", dato.cod, dato.nome, dato.cfu, dato.voto);
+        sscanf(buffer, "%4[^|]|%99[^|]|%d|%d", dato.cod, &dato.nome, &dato.cfu, &dato.voto);
+
+        if(strlen(dato.nome) > max_len_exam) {
+            max_len_exam = strlen(dato.nome);
+        }
+        
+        cod_[size][0] = *(dato.cod);
+        nome_[size][0] = *dato.nome;
+        cfu_[size][0] = dato.cfu;
+        voto_[size][0] = dato.voto;
+
+        size++;
     }
+    int i=0,diff;
+
+    printf("%s",nome_[1]);
+
+    while (i < size) {
+        diff = max_len_exam - strlen(*nome);
+        strncat(*nome,(char *)' ',diff);
+        nome++;
+        i++;
+    }
+    nome -= size;
+
+    i=0;
+    char *o_cod, *o_nome, *o_cfu, *o_voto;
+    while (i < size){
+        o_cod = strcat("COD: ", *cod);
+        o_nome = strcat("NOME: ", *nome);
+        o_cfu = strcat("CFU: ", *cfu);
+        o_voto = strcat("VOTO: ", *voto);
+        strcat(output, o_cod);
+        strcat(output, o_nome);
+        strcat(output, o_cfu);
+        strcat(output, o_voto);
+        strcat(output, (char *)'\n');
+                
+        i++;
+    }
+
+    printf("OUTPUT\n%s",output);
+    
 
     fclose(file);
 }
@@ -66,9 +116,9 @@ void media(const char *filename, int verbose){
 
         sscanf(buffer, "%4[^|]|%99[^|]|%d|%d", dato.cod, dato.nome, &dato.cfu, &dato.voto);
        
-        if(verbose){
-            printf("COD: %s\t CFU: %d\t\t Voto: %d\n", dato.cod, dato.cfu, dato.voto);
-        }
+        // if(verbose){
+        //     printf("COD: %s\t CFU: %d\t\t Voto: %d\n", dato.cod, dato.cfu, dato.voto);
+        // }
 
         sum_votes += dato.voto * dato.cfu;
         sum_cfu += dato.cfu;
@@ -132,11 +182,11 @@ int main(int argc, char const *argv[]){
         printf("Errore: -d deve essere usato da solo.\n");
         return 1;
     }
-    if (v && !m) {
-        printf("Errore: -v può essere usato solo con -m.\n");
-        return 1;
-    }
-    if (v && !o) {
+    // if (v && !m) {
+    //     printf("Errore: -v può essere usato solo con -m.\n");
+    //     return 1;
+    // }
+    if (v && o) {
         leggi_da_file_testo(file_name);
     }
 
