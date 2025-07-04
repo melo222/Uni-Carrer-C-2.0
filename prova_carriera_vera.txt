@@ -1,4 +1,3 @@
-ENG|Accertamento Lingua Inglese|03|30
 MdC|Matematica del Continuo|12|23
 DIR|Diritto|06|19
 Prog|Programmazione|12|25
@@ -15,8 +14,7 @@ PSS|Programmazione Software Sicuro|06|24
 AGR|Analisi e Gestione del Rischio|06|28
 SSR1|Sicurezza dei Sistemi e delle Reti|06|26
 CF_|Computer Forensics|06|29
-AO_|Aspetti Organizzativi Random|03|30
-MDD|Matematica del Discreto|06|19
-TSS|Tecniche Sicurezza del Software|06|21
+MDD|Matematica del Discreto|06|26
+TSS|Tecniche Sicurezza del Software|06|29
 BIO|Biometria|06|27
 SSW|Sicurezza Web|06|24
