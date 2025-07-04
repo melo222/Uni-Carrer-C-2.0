@@ -74,10 +74,6 @@ void media(const char *filename, int verbose){
 
         sscanf(buffer, "%4[^|]|%99[^|]|%d|%d", dato.cod, dato.nome, &dato.cfu, &dato.voto);
         
-        // if(verbose){
-        //     printf("COD: %s\t CFU: %d\t\t Voto: %d\n", dato.cod, dato.cfu, dato.voto);
-        // }
-
         sum_votes += dato.voto * dato.cfu;
         sum_cfu += dato.cfu;
     }
@@ -90,9 +86,6 @@ void media(const char *filename, int verbose){
     printf("Media: %f\n",media);
 
     printf("Voto d'ingresso (arrotondato per eccesso): %f\n",media * 11 / 3);
-
-    // voto media * 11 / 3
-
 
     fclose(file);
 }
@@ -145,10 +138,6 @@ int main(int argc, char const *argv[]){
         printf("Errore: -d deve essere usato da solo.\n");
         return 1;
     }
-    // if (v && !m) {
-    //     printf("Errore: -v può essere usato solo con -m.\n");
-    //     return 1;
-    // }
     if (v && o) {
         leggi_da_file_testo(file_name);
     }
@@ -162,7 +151,7 @@ int main(int argc, char const *argv[]){
         // qua trasferiamo la cartella da un'altra parte.
     }
     if(!(d || n || o || m || v)){        
-        printf("Uso: %s\n-----USAGE-----\n-n <new nome file> || -o <nome file> [options] {-m media, -v verbose}\n", argv[0]);
+        printf("%s\n-----USAGE-----\n-n <new nome file> || -o <nome file> [options] {-m media, -v verbose}\n", argv[0]);
     }
 
     return 0;
