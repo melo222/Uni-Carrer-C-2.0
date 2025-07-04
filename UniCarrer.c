@@ -156,6 +156,9 @@ int main(int argc, char const *argv[]){
         printf("modifica richiesta alla directory contenente le carriere, verrà applicata la modifica dopo l'esecuzioni delle azioni richieste in questa istanza.");
         // qua trasferiamo la cartella da un'altra parte.
     }
+    if(!(d || n || o || m || v)){        
+        printf("Uso: %s\n-----USAGE-----\n-n <new nome file> || -o <nome file> [options] {-m media, -v verbose}\n", argv[0]);
+    }
 
     return 0;
 }
