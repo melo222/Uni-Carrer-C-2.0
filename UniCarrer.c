@@ -73,7 +73,7 @@ void media(const char *filename, int verbose){
     while (fgets(buffer, sizeof(buffer), file)) {
 
         sscanf(buffer, "%4[^|]|%99[^|]|%d|%d", dato.cod, dato.nome, &dato.cfu, &dato.voto);
-       
+        
         // if(verbose){
         //     printf("COD: %s\t CFU: %d\t\t Voto: %d\n", dato.cod, dato.cfu, dato.voto);
         // }
@@ -88,6 +88,11 @@ void media(const char *filename, int verbose){
 
     media = (float)sum_votes / (float)sum_cfu;
     printf("Media: %f\n",media);
+
+    printf("Voto d'ingresso (arrotondato per eccesso): %f\n",media * 11 / 3);
+
+    // voto media * 11 / 3
+
 
     fclose(file);
 }
